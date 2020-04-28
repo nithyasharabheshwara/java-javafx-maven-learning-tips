@@ -7,29 +7,29 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>13</maven.compiler.source>
-        <maven.compiler.target>13</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>13</version>
+            <version>11</version>
         </dependency> 
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>13</version>
+            <version>11</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>13</version>
+            <version>11</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>13</version>
+            <version>11</version>
         </dependency>
         <dependency>
             <groupId>com.jfoenix</groupId>
@@ -46,8 +46,23 @@
                 <configuration>
                     <mainClass>application.Main</mainClass>
                     <options>
-                        <option>--add-opens</option>
-                        <option>javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED</option>
+                        <option>--add-opens</option><option>javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED</option>
+                        <option>--add-opens</option><option>javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</option>
+                        <option>--add-opens</option><option>javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED</option>
+                        <option>--add-opens</option><option>javafx.base/com.sun.javafx.binding=ALL-UNNAMED</option>
+                        <option>--add-opens</option><option>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</option>
+                        <option>--add-opens</option><option>javafx.base/com.sun.javafx.event=ALL-UNNAMED</option>
+
+
+                        <option>--add-exports</option><option>javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</option>
+                        <option>--add-exports</option><option>javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED</option>
+                        <option>--add-exports</option><option>javafx.base/com.sun.javafx.binding=ALL-UNNAMED</option>
+                        <option>--add-exports</option><option>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</option>
+                        <option>--add-exports</option><option>javafx.base/com.sun.javafx.event=ALL-UNNAMED</option>
+                         <!-- because module javafx.controls does not 
+                        export 
+                        com.sun.javafx.scene.control.behavior 
+                        to unnamed module  -->
                     </options>
                 </configuration>
             </plugin>

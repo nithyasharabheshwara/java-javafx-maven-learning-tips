@@ -1,0 +1,58 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#logInWindow_1,
+#logInWindow_2 {
+	-fx-background-color: #ffffff;
+}
+
+.button {
+	-fx-background-color: #ffffff;
+	-fx-cursor: hand;
+}
+
+.choice-box {
+	-fx-background-color: #ffffff;
+	-fx-text-fill: black;
+}
+
+.missing {
+	-fx-border-color: #f55442;
+	-fx-border-width: 1px;
+}
+
+.setvisibilityFalse {
+	visibility: hidden;
+}
+
+.setvisibilityTrue {
+	visibility: visible;
+}
+
+#NumberField {
+    -fx-border-width: 1;
+    -fx-border-color: lightgray;
+    -fx-background-insets:1;
+    -fx-border-radius:3 0 0 3;
+    /*    -fx-border-radius:0 0 0 0;*/
+}
+#NumberSpinnerArrow {
+    -fx-fill: gray;
+    -fx-stroke: gray;
+    /*        -fx-effect: innershadow( gaussian , black , 2 , 0.6 , 1 , 1 )*/
+}
+#ButtonsBox {
+    -fx-border-color:lightgray;
+    -fx-border-width: 1 1 1 0;
+    -fx-border-radius: 0 3 3 0;
+    /*    -fx-border-radius: 0 0 0 0;*/
+}
+#SpinnerButtonUp {
+    -fx-background-insets: 0;
+    -fx-background-radius:0 3 0 0;
+    /*    -fx-background-radius:0;*/
+}
+#SpinnerButtonDown {
+    -fx-background-insets: 0;
+    -fx-background-radius:0 0 3 0;
+    /*    -fx-background-radius:0;*/
+}

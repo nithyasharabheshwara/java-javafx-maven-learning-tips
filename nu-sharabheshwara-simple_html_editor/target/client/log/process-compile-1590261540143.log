@@ -1,0 +1,31 @@
+Process
+=======
+compile
+
+Command Line
+============
+/home/sharabheshwara/Development/graalvm/graalvm-svm-linux-20.1-latest/bin/native-image --report-unsupported-elements-at-runtime -Djdk.internal.lambda.eagerlyInitialize=false --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout -H:DeadlockWatchdogInterval=0 --features=org.graalvm.home.HomeFinderFeature -H:TempDirectory=/mnt/f/code/nu-sharabheshwara/nu-sharabheshwara-simple_html_editor/target/client/x86_64-linux/gvm/tmp -H:EnableURLProtocols=http,https -H:ReflectionConfigurationFiles=/mnt/f/code/nu-sharabheshwara/nu-sharabheshwara-simple_html_editor/target/client/x86_64-linux/gvm/reflectionconfig-x86_64-linux.json -H:JNIConfigurationFiles=/mnt/f/code/nu-sharabheshwara/nu-sharabheshwara-simple_html_editor/target/client/x86_64-linux/gvm/jniconfig-x86_64-linux.json -H:ResourceConfigurationFiles=/mnt/f/code/nu-sharabheshwara/nu-sharabheshwara-simple_html_editor/target/client/x86_64-linux/gvm/resourceconfig-x86_64-linux.json -H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle -Dsvm.platform=org.graalvm.nativeimage.Platform$LINUX_AMD64 -cp /mnt/f/code/nu-sharabheshwara/nu-sharabheshwara-simple_html_editor/target/classes:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-base.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-base.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-controls.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-controls.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-fxml.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-fxml.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-graphics.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-graphics.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-media.jar:/home/sharabheshwara/.gluon/substrate/javafxStaticSdk/15-ea+gvm20/linux-x86_64/sdk/lib/javafx-media.jar:/home/sharabheshwara/.m2/repository/org/openjfx/javafx-web/13.0.1/javafx-web-13.0.1-linux.jar:/home/sharabheshwara/.m2/repository/org/openjfx/javafx-web/13.0.1/javafx-web-13.0.1.jar nu.sharabheshwara.simple_html_editor.Main
+
+Output
+======
+[nu.sharabheshwara.simple_html_editor.main:225]    classlist:   9,702.31 ms,  0.96 GB
+[nu.sharabheshwara.simple_html_editor.main:225]        (cap):   5,405.40 ms,  0.96 GB
+[nu.sharabheshwara.simple_html_editor.main:225]        setup:  11,578.22 ms,  0.96 GB
+[nu.sharabheshwara.simple_html_editor.main:225]     (clinit):   2,730.79 ms,  3.85 GB
+[nu.sharabheshwara.simple_html_editor.main:225]   (typeflow): 117,253.70 ms,  3.85 GB
+[nu.sharabheshwara.simple_html_editor.main:225]    (objects):  78,379.39 ms,  3.85 GB
+[nu.sharabheshwara.simple_html_editor.main:225]   (features):   6,738.86 ms,  3.85 GB
+[nu.sharabheshwara.simple_html_editor.main:225]     analysis: 210,880.39 ms,  3.85 GB
+[nu.sharabheshwara.simple_html_editor.main:225]     universe:   4,880.75 ms,  3.82 GB
+[nu.sharabheshwara.simple_html_editor.main:225]      (parse):  27,742.98 ms,  3.52 GB
+[nu.sharabheshwara.simple_html_editor.main:225]     (inline):  42,423.11 ms,  3.66 GB
+[nu.sharabheshwara.simple_html_editor.main:225]    (compile): 110,018.24 ms,  3.76 GB
+[nu.sharabheshwara.simple_html_editor.main:225]      compile: 186,938.55 ms,  3.76 GB
+[nu.sharabheshwara.simple_html_editor.main:225]        image:  12,870.20 ms,  3.76 GB
+[nu.sharabheshwara.simple_html_editor.main:225]        write:     927.56 ms,  3.76 GB
+[nu.sharabheshwara.simple_html_editor.main:225]      [total]: 438,593.91 ms,  3.76 GB
+
+
+Result
+======
+result: 0

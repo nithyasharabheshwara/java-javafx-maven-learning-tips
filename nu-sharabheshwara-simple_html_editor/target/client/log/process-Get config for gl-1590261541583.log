@@ -1,0 +1,19 @@
+Process
+=======
+Get config for gl
+
+Command Line
+============
+/usr/bin/pkg-config --libs gl
+
+Output
+======
+Package gl was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gl.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gl' found
+
+
+Result
+======
+result: 1

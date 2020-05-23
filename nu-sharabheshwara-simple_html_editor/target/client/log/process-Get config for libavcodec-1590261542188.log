@@ -1,0 +1,19 @@
+Process
+=======
+Get config for libavcodec
+
+Command Line
+============
+/usr/bin/pkg-config --libs libavcodec
+
+Output
+======
+Package libavcodec was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libavcodec.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libavcodec' found
+
+
+Result
+======
+result: 1

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>nu.sharabheshwara</groupId>
+    <artifactId>nu-sharabheshwara-simple_html_editor</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <!-- 14.0.1 -->
+        <javafx.version>13.0.1</javafx.version>
+        <client.plugin.version>0.1.24</client.plugin.version>
+        <mainClassName>nu.sharabheshwara.simple_html_editor.Main</mainClassName>
+    </properties>
+    <name>nu-sharabheshwara-simple_html_editor</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+                    <mainClass>${mainClassName}</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.gluonhq</groupId>
+                <artifactId>client-maven-plugin</artifactId>
+                <version>${client.plugin.version}</version>
+                <configuration>
+                    <!-- Uncomment to run on iOS: -->
+                    <!-- <target>ios</target> -->
+		    <!-- <target>android</target> -->
+                    <!-- <mainClass>${mainClassName}</mainClass> -->
+                    <mainClass>nu.sharabheshwara.simple_html_editor.Main</mainClass> 
+                    <!-- <options>
+                        <option> - - add-opens</option><option>javafx.web/com.sun.javafx.webkit.prism.PrismGraphicsManager=ALL-UNNAMED</option>
+                        <option> - - add-exports</option><option>javafx.web/com.sun.javafx.webkit.prism.PrismGraphicsManager=ALL-UNNAMED</option>
+                    </options>
+                    <reflectionList>
+                        <list>javafx.scene.web.WebEngine</list>
+                    </reflectionList>
+                    <jniList>
+                    </jniList> 
+                    -->
+                    <!-- <enableSWRendering>true</enableSWRendering> -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+            </plugin>
+        </plugins>
+    </build>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>gluon-releases</id>
+            <url>http://nexus.gluonhq.com/nexus/content/repositories/releases/</url>	
+        </pluginRepository>
+        <pluginRepository>
+            <id>gluon-snapshots</id>
+            <url>https://nexus.gluonhq.com/nexus/content/repositories/public-snapshots/</url>	
+        </pluginRepository>
+    </pluginRepositories>    
+</project>

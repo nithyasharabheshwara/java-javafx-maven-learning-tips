@@ -1,0 +1,19 @@
+Process
+=======
+Get config for libavformat
+
+Command Line
+============
+/usr/bin/pkg-config --libs libavformat
+
+Output
+======
+Package libavformat was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libavformat.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libavformat' found
+
+
+Result
+======
+result: 1

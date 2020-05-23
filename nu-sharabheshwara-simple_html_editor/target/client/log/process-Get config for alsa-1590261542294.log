@@ -1,0 +1,19 @@
+Process
+=======
+Get config for alsa
+
+Command Line
+============
+/usr/bin/pkg-config --libs alsa
+
+Output
+======
+Package alsa was not found in the pkg-config search path.
+Perhaps you should add the directory containing `alsa.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'alsa' found
+
+
+Result
+======
+result: 1

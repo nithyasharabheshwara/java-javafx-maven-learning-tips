@@ -1,0 +1,19 @@
+Process
+=======
+Get config for libavutil
+
+Command Line
+============
+/usr/bin/pkg-config --libs libavutil
+
+Output
+======
+Package libavutil was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libavutil.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libavutil' found
+
+
+Result
+======
+result: 1
